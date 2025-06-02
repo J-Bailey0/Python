@@ -108,7 +108,7 @@ plt.show()
 ## What is the most optimal skill for Data Analysts?
 
 ### Method
-To find the most optimal skill for Data Analysts I pulled the **top 6 skills** as requested by job postings and compared their **percentage requested** to the **median salary** of jobs requesting that skill.
+To find the most optimal skill for Data Analysts I sorted all skills by their count in the data, then pulled the **top 6 skills** and compared their **percentage requested** to the **median salary** of jobs requesting that skill.
 
 ```
 df_skills_da = df_skills_exploded.groupby('job_skills')['salary_year_avg'].agg(['count', 'median']).sort_values('count', ascending=False)
